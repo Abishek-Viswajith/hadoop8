@@ -1,5 +1,7 @@
 cd ~/Downloads
+
 tar -xvzf apache-hive-4.0.1-bin.tar.gz
+
 sudo mv apache-hive-4.0.1-bin /usr/local/hive
 
 nano ~/.bashrc
