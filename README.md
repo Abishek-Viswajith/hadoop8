@@ -7,6 +7,7 @@ sudo mv apache-hive-4.0.1-bin /usr/local/hive
 nano ~/.bashrc
 
 export HIVE_HOME=/usr/local/hive
+
 export PATH=$PATH:$HIVE_HOME/bin
 
 source ~/.bashrc
@@ -28,9 +29,11 @@ sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml
 </property>
 
 stop-dfs.sh
+
 start-dfs.sh
 
 hdfs dfs -mkdir -p /user/hive/warehouse
+
 hdfs dfs -chmod -R 777 /user/hive/warehouse
 
 hiveserver2
@@ -56,5 +59,6 @@ nano ~/students.csv
 3,Charlie,22
 
 LOAD DATA LOCAL INPATH '/home/abi/students.csv' INTO TABLE students;
+
 SELECT * FROM students;
 
