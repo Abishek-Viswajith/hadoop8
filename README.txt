@@ -28,6 +28,18 @@ sudo nano /usr/local/hadoop/etc/hadoop/core-site.xml
   <value>*</value>
 </property>
 
+nano hive-site.xml
+
+<property>
+    <name>hive.server2.authentication</name>
+    <value>NONE</value>  
+</property>
+
+<property>
+    <name>hive.server2.enable.impersonation</name>
+    <value>true</value>
+</property>
+
 stop-dfs.sh
 
 start-dfs.sh
